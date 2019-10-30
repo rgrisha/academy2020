@@ -34,12 +34,23 @@ public class Products {
 
     //implement this
     private void addProduct(String id, String name, LocalDateTime salesDate, double amount) {
+        Product product = new Product(id, name);
+        ProductStatistics prodStat;
+        prodStat = productStatistics.get(product);
+        if(prodStat == null) {
+            prodStat = new ProductStatistics(salesDate, salesDate, amount);
+        } else {
+            prodStat.updateFirstSalesDate(salesDate);
+            prodStat.updateLastSalesDate(salesDate);
+            prodStat.updateSalesAmount(amount);
+        }
+        productStatistics.put(product, prodStat);
     }
 
 
     //implement this
     public int numberOfProducts() {
-        return -1;
+        return productStatistics.size();
     }
 
     public void printAll() {
@@ -48,6 +59,7 @@ public class Products {
             ProductStatistics stat = productEntry.getValue();
 
             // implement printing here
+            System.out.println(product + ": " + stat);
         }
     }
 
