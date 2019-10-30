@@ -25,6 +25,13 @@ public class Poem {
 
     // implement this
     public void print() {
+        //possible
+        //for(int i = 0; i < poemLines.size(); i++) ....
+
+        // but collections support for Iterator:
+        for(String line: poemLines) {
+            System.out.println(line);
+        }
     }
 
 
