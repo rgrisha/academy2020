@@ -11,6 +11,8 @@ public class ProductStatistics {
     salesAmount (double)
      */
 
+    // implement constructor
+
     private LocalDateTime getMinDate(LocalDateTime d1, LocalDateTime d2) {
         if(d1.compareTo(d2) < 0) return d1;
         return d2;
@@ -27,12 +29,12 @@ public class ProductStatistics {
     }
 
     //implement this
-    public void updateFirstSalesDate() {
+    public void updateFirstSalesDate(LocalDateTime dt) {
 
     }
 
     //implement this
-    public void updateLastSalesDate() {
+    public void updateLastSalesDate(LocalDateTime dt) {
 
     }
 }
