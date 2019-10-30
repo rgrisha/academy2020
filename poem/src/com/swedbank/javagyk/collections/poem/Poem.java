@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Poem {
 
-    List<String> poemLines;
+    private List<String> poemLines;
 
     public Poem(List<String> lines) {
         poemLines = lines;
