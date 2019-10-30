@@ -6,14 +6,15 @@ public class Product {
 
   private String id;
   private String name;
-  private LocalDateTime firstSaleOn;
+  private LocalDateTime lastAppearsOn;
 
-  public Product(String id, String name) {
-    this.id = id;
-    this.name = name;
-  }
+    public Product(String id, String name, LocalDateTime lastAppearsOn) {
+        this.id = id;
+        this.name = name;
+        this.lastAppearsOn = lastAppearsOn;
+    }
 
-  public String getId() {
+    public String getId() {
     return id;
   }
 
@@ -21,11 +22,6 @@ public class Product {
     return name;
   }
 
-  public LocalDateTime getFirstSaleOn() {
-    return firstSaleOn;
-  }
 
-  public void setFirstSaleOn(LocalDateTime firstSaleOn) {
-    this.firstSaleOn = firstSaleOn;
-  }
+
 }
