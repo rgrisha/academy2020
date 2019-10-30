@@ -7,7 +7,7 @@ public class PoemLineReverseComparator implements Comparator<PoemLine> {
     // Implement this
     @Override
     public int compare(PoemLine o1, PoemLine o2) {
-        return 0;
+        return o2.getNumber() - o1.getNumber();
     }
 
 

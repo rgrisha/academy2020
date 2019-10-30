@@ -23,6 +23,7 @@ public class Reader {
         int i = 0;
         while ((s = fileReader.readLine()) != null) {
             fileLines.add(new PoemLine(i, s));
+            i++;
         }
 
         return fileLines;
